@@ -7,6 +7,6 @@ const pageTitle = "Astro Learning BLOG";
 
 <BaseLayout pageTitle={pageTitle}>
     <ul>
-        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate.toString().slice(0,10)} author={post.frontmatter.author}} />)}
     </ul>
 </Baselayout>
